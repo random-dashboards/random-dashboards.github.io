@@ -1,0 +1,154 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Grey background */
+    color: #000; /* Black text */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    text-align: center;
+    max-width: 30%;
+    width: 90%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 60px; /* Increased left padding */
+    padding-right: 60px; /* Increased right padding */
+}
+
+h1 {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 1.8em; /* Increased font size */
+}
+
+h2 {
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.3em; /* Increased font size */
+}
+
+p {
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 0.95em; /* Increased font size */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+ul li {
+    color: #000;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.95em; /* Increased font size */
+}
+
+ul li span {
+    position: absolute;
+    left: 0;
+}
+
+.waitlist-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.2; /* Single line */
+}
+
+.waitlist-form {
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.waitlist-form input[type="email"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #000;
+}
+
+.waitlist-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+.waitlist-form button:hover {
+    background-color: #333;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* Mobile and Tablet Optimization (Further Increased Padding) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 85%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 20px; /* Further increased left padding for mobile */
+        padding-right: 20px; /* Further increased right padding for mobile */
+    }
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 1em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    p, ul li, .waitlist-text, .waitlist-form input[type="email"], .waitlist-form button {
+        font-size: 0.75em;
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-bottom: 25px;
+    }
+    ul li {
+        margin-bottom: 6px;
+        padding-left: 20px;
+    }
+    .waitlist-form {
+        gap: 5px;
+    }
+    .message {
+        margin-top: 10px;
+    }
+}

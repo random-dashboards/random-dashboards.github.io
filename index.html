@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to RandomDashboards 👋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to RandomDashboards 👋</h1>
+        <p>Elevate your e-commerce strategy with granular visibility into category & competitor performance across key Southeast Asia platforms.</p>
+
+        <h2>Gain strategic insights:</h2>
+        <ul>
+            <li><span aria-hidden="true">🎯</span> Understand your total addressable market (TAM) online.</li>
+            <li><span aria-hidden="true">📈</span> Monitor your market share evolution against the competitive set.</li>
+            <li><span aria-hidden="true">🔥</span> Identify high-velocity SKUs and emerging category trends.</li>
+            <li><span aria-hidden="true">🔍</span> Uncover potential niche markets to target and re-target.</li>
+            <li><span aria-hidden="true">📊</span> Conduct feature parity analysis against top-performing products.</li>
+        </ul>
+
+        <p class="waitlist-text">Join our waitlist & unlock actionable insights today!</p>
+
+        <form id="waitlistForm" action="https://formspree.io/f/xgvkkaly" method="POST" class="waitlist-form">
+            <input type="email" id="email" name="email" placeholder="Enter your professional email" required>
+            <button type="submit">Get early access</button>
+        </form>
+
+        <div id="formMessage" class="message" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('waitlistForm');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    form.reset();
+                    formMessage.textContent = 'Thank you for requesting early access!';
+                    formMessage.className = 'message success';
+                    formMessage.style.display = 'block';
+                })
+                .catch(error => {
+                    formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                    formMessage.className = 'message error';
+                    formMessage.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

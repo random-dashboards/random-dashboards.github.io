@@ -32,10 +32,14 @@ body {
     text-align: center;
     max-width: max(500px, 30%);
     width: 90%;
-    padding-top: 40px;
-    padding-bottom: 60px;
-    padding-left: 60px; /* Increased left padding */
-    padding-right: 60px; /* Increased right padding */
+    margin: 1rem auto;
+}
+
+h1 {
+    color: var(--color-black);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 h2 {
@@ -48,8 +52,7 @@ h2 {
 p {
     color: var(--color-black);
     line-height: 1.2rem;
-    font-size: 0.9rem;
-    line-height: 1.3rem;
+    font-size: 0.85rem;
     width: 95%;
     margin: 0rem auto 2rem
 }
@@ -131,7 +134,7 @@ ul li span {
 }
 
 /* Mobile and Tablet Optimization (Further Increased Padding) */
-@media (max-width: 600px) {
+@media (max-width: 594px) {
     .container {
         max-width: 85%;
         padding: 2rem 1rem;

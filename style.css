@@ -1,3 +1,18 @@
+:root {
+    --color-black: #000000;
+    --color-black-rgb: 0,0,0;
+    --color-white: #ffffff;
+    --color-white-rgb: 255,255,255;
+    --color-grey-light: #f0f0f0; /* Light grey */
+    --color-grey-light-rgb: 240,240,240;
+    --color-grey-medium: #808080; /* Medium grey */
+    --color-grey-medium-rgb: 128,128,128;
+    --color-grey-dark: #333333; /* Dark grey */
+    --color-grey-dark-rgb: 51,51,51;
+    --color-hover-background: #f6f6f6;
+    --color-hover-background-rgb: 246,246,246;
+  }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
@@ -5,16 +20,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0; /* Grey background */
-    color: #000; /* Black text */
+    background-color: var(--color-hover-background); /* Grey background */
+    color: var(--color-black); /* Black text */
 }
 
 .container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: none;
+    background-color: var(--color-white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(var(--color-grey-dark-rgb), 0.05);
     text-align: center;
     max-width: max(500px, 30%);
     width: 90%;
@@ -24,87 +38,88 @@ body {
     padding-right: 60px; /* Increased right padding */
 }
 
-h1 {
-    color: #000;
-    margin-bottom: 15px;
-    font-size: 1.8em; /* Increased font size */
-}
-
 h2 {
-    color: #000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.3em; /* Increased font size */
+    color: var(--color-black);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 p {
-    color: #000;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    font-size: 0.95em; /* Increased font size */
+    color: var(--color-black);
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    width: 95%;
+    margin: 0rem auto 2rem
 }
 
 ul {
     list-style: none;
-    padding: 0;
-    margin-bottom: 35px;
+    padding: 0rem;
     text-align: left;
+    max-width: 400px;
+    margin: 0rem auto 2rem;
 }
 
 ul li {
-    color: #000;
-    margin-bottom: 12px;
-    padding-left: 25px;
+    color: var(--color-black);
+    padding-left: 1.5rem;
     position: relative;
-    font-size: 0.95em; /* Increased font size */
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 ul li span {
     position: absolute;
     left: 0;
+    font-size: 0.85rem;
 }
 
-.waitlist-text {
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 1em;
-    line-height: 1.2; /* Single line */
+.waitlist-text {    
+    color: var(--color-black);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 0.6rem;
 }
 
 .waitlist-form {
     display: flex;
-    gap: 10px;
-    max-width: 100%;
+    gap: 0.8rem;
+    max-width: 90%;
     margin: 0 auto;
+    align-items: center;
 }
 
 .waitlist-form input[type="email"] {
     flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #000;
-    border-radius: 4px;
-    font-size: 0.95em;
-    color: #000;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--color-grey-medium);
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--color-black);
 }
 
-.waitlist-form button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+.waitlist-form a {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.7625rem 1rem;
+    border-radius: 0.3rem;
     cursor: pointer;
-    font-size: 0.95em;
+    font-size: 0.9em;
+    font-weight: 400;
 }
 
-.waitlist-form button:hover {
-    background-color: #333;
+.waitlist-form a:hover {
+    background-color: var(--color-grey-dark);
 }
 
 .message {
-    margin-top: 15px;
+    margin-top: 1rem;
     font-weight: bold;
-    font-size: 0.95em;
+    font-size: 0.85em;
 }
 
 .success {
@@ -116,39 +131,29 @@ ul li span {
 }
 
 /* Mobile and Tablet Optimization (Further Increased Padding) */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
-        padding: 20px;
         max-width: 85%;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        padding-left: 20px; /* Further increased left padding for mobile */
-        padding-right: 20px; /* Further increased right padding for mobile */
+        padding: 2rem 1rem;
     }
-    h1 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-    h2 {
-        font-size: 1em;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    p, ul li, .waitlist-text, .waitlist-form input[type="email"], .waitlist-form button {
-        font-size: 0.75em;
-        margin-bottom: 10px;
-    }
-    ul {
-        margin-bottom: 25px;
-    }
-    ul li {
-        margin-bottom: 6px;
-        padding-left: 20px;
-    }
+
     .waitlist-form {
-        gap: 5px;
+        flex-direction: column;
+        max-width: 400px; 
     }
-    .message {
-        margin-top: 10px;
+
+    .waitlist-form input {
+        min-width: 80%;
+    }
+
+    .waitlist-form a {
+        padding: 0.7rem 1rem;
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    ul {
+        max-width: 90%;
     }
 }

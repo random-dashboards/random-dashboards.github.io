@@ -14,7 +14,7 @@
   }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Inter, sans-serif;
+    font-family: Inter;
     margin: 0;
     display: flex;
     justify-content: center;

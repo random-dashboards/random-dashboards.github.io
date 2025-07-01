@@ -14,7 +14,7 @@
   }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Inter, sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -32,7 +32,6 @@ body {
     text-align: center;
     max-width: max(500px, 30%);
     width: 90%;
-    margin: auto;
 }
 
 h1 {
@@ -136,6 +135,11 @@ ul li span {
 
 /* Mobile and Tablet Optimization (Further Increased Padding) */
 @media (max-width: 594px) {
+    body {
+        align-items: flex-start; /* Align items to the top on smaller screens */
+        padding-top: 4%; /* Add some top padding for better spacing */
+    }
+
     .container {
         max-width: 85%;
         padding: 2rem 1rem;

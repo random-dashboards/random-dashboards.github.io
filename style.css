@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--color-hover-background); /* Grey background */
+    background-color: var(--color-grey-light); /* Grey background */
     color: var(--color-black); /* Black text */
 }
 
